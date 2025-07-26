@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=auto, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>CaptureTheMemories</title>
+</head>
+
+<body class="font-serif bg-slate-800 scroll-smoot">
+    <!--offer tab-->
+    <div class="bg-black p-3 flex items-center gap-10 align-middle justify-center sticky top-0 z-10">
+        <h2 class="text-white font-bold text-xs md:text-2xl">Buy Cameras Online With Up 40% </h2>
+        <i class="fa-solid fa-xmark  cursor-pointer" style="color: white;"></i>
+    </div>
+    <!--Responsive navbar-->
+    <nav class="bg-slate-800 text-white shadow-md fixed w-full z-11 ">
+        <div class=" shadow-md flex">
+
+            <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+                <a href="#" class="text-4xl font-bold text-white">CaptureTheMemories</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-white  hover:text-blue-400">Home</a>
+                    <a href="#bestseller" class="text-white  hover:text-blue-400">Bestseller</a>
+                    <a href="#brands" class="text-white  hover:text-blue-400">Brands</a>
+                    <a href="#about" class="text-white hover:text-blue-400">About</a>
+                </div>
+                <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6 md:hidden mt-3" class="size-6 ">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </div>
+        </div>
+    </nav>
+    <!--Sidenav-->
+    <section id="sidenav" class=" fixed z-50 top-0 transition-all duration-100 bg-slate-700"
+        style="width:50%; height:100vh; right:150%">
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col gap-10 items-center text-grey-600  ">
+            <li>
+                <a class="hover:underline hover:text-black" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="product.html">Products</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </section>
+    <!--Checkbox section-->
+    <section class="flex flex-row px-2 md:px-6 py-10 gap-4 md:gap-10 mt-30">
+        <!-- Sidebar -->
+        <aside class="w-1/5 border-r-2 border-gray-600  animate-slide-in-left checkbox-tag">
+            <div class="pr-4">
+                <h2 class="font-bold text-xs md:text-2xl mb-4">Bestseller</h2>
+                <ul class="text-xs md:text-lg space-y-2 font-semibold">
+                    <li class="flex items-center gap-2">
+                        <input type="checkbox" class="text-xs filter-checkbox" value="Below-15,000">
+                        <span>Below-15,000</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <input type="checkbox" class="text-xs filter-checkbox" value="Below-35,000">
+                        <span>Below-35,000</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <input type="checkbox" class="text-xs filter-checkbox" value="Below-60,000">
+                        <span>Below-60,000</span>
+                    </li>
+                </ul>
+
+
+                <h2 class="font-bold text-xs md:text-2xl mt-10 mb-4">Brands</h2>
+                <ul class="text-xs md:text-lg space-y-2 font-semibold">
+                    <li class="flex items-center gap-2">
+                        <input type="checkbox" class="text-sm filter-checkbox" value="Sony">
+                        <span>Sony</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <input type="checkbox" class="text-sm filter-checkbox" value="Nikon">
+                        <span>Nikon</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <input type="checkbox" class="text-sm filter-checkbox" value="Insta360">
+                        <span>Insta360</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <input type="checkbox" class="text-sm filter-checkbox" value="GoPro">
+                        <span>GoPro</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <input type="checkbox" class="text-sm filter-checkbox" value="Fujifilm">
+                        <span>Fujifilm</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <input type="checkbox" class="text-sm filter-checkbox" value="Canon">
+                        <span>Canon</span>
+                    </li>
+                </ul>
+
+            </div>
+        </aside>
+
+        <!--collections-->
+        <div class="w-full md:w-5/6">
+            <div class="mb-6">
+                <input type="text" id="myinput" onkeyup="myfunction()" placeholder="Search your camera & Accessries..."
+                    class="w-full px-4 py-2 border border-[#d4a373] rounded-full focus:outline-none focus:ring-2 focus:ring-[#bc3908]">
+            </div>
+
+            <!-- Bestseller section -->
+            <section id="bestseller" class=" bg-slate-800 text-white py-10">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold mb-6 text-black">Bestseller</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-6 ">
+                        <div
+                            class="bg-black p-5 rounded-lg w-auto h-auto shadow-md hover:ease-in-out hover:scale-105 transition-transform duration-300 relative Bestseller Below-35,000 Below-60,000 checkbox-tag search-tag">
+                            <button id="heart"> <i class="fa-solid fa-heart absolute z-10"></i></button>
+                            <img src="images/263094_0_xmxxzf.webp" alt="Camera 1"
+                                class="w-200 h-200 object-cover mb-4 rounded">
+                            <h3 class="text-xs font-semibold">Insta360 X3 8K and 72MP 60 FPS Waterproof Action Camera
+                                with Magic
+                                Third Person Views (Black)</h3>
+                            <span class="newprice ">
+                                <span class="amount text-xl font-bold">₹33,990.00</span>
+                            </span>
+                            <span class="oldprice text-gray-500"><s>₹45,999</s></span>
+
+                        </div>
+                        <div
+                            class="bg-black p-5 rounded-lg shadow-md hover:ease-in-out hover:scale-105 transition-transform duration-300 relative Bestseller Below-15,000 Below-35,000 Below-60,000 checkbox-tag search-tag">
+                            <button id="heart"> <i class="fa-solid fa-heart absolute z-10"></i></button>
+                            <img src="images/272007_hqu4eq.webp" alt="Camera 2"
+                                class="w-200 h-200 object-cover mb-4 rounded ">
+                            <h3 class="text-xs font-semibold">FUJIFILM Instax Mini 12 Instant Camera (Blossom Pink)</h3>
+                            <span class="newprice">
+                                <span class="amount text-xl font-bold">₹13,999.00</span>
+                            </span>
+                            <span class="oldprice text-gray-500"><s>₹18,500</s></span>
+
+                        </div>
+                        <div
+                            class="bg-black p-5 rounded-lg shadow-md hover:ease-in-out hover:scale-105 transition-transform duration-300 relative Bestseller Below-60,000 checkbox-tag search-tag">
+                            <button class="heart"> <i class="fa-solid fa-heart absolute z-10"></i></button>
+                            <img src="images/274329_0_upjhd2.webp" alt="Camera 3"
+                                class="w-200 h-200 object-cover  rounded">
+                            <h3 class="text-xs font-semibold mt-6">Canon EOS R100 24.1MP DSLR Camera (18-45 mm Lens,
+                                DIGIC 8
+                                Processor)</h3>
+                            <span class="newprice">
+                                <span class="amount text-xl font-bold ">₹45,899.00</span>
+                            </span>
+                            <span class="oldprice text-gray-500 "><s>₹80,900</s></span>
+                        </div>
+                        <div
+                            class="bg-black p-5 rounded-lg shadow-md hover:ease-in-out hover:scale-105 transition-transform duration-300 relative Below-60,000 Bestseller checkbox-tag search-tag">
+                            <button class="heart"> <i class="fa-solid fa-heart absolute z-10"></i></button>
+                            <img src="images/310815_oku57v.webp" alt="Camera 3"
+                                class="w-200 h-200 object-cover rounded">
+                            <h3 class="text-xs font-semibold">GoPro HERO13 Creator Edition 5.3K and 27.6MP 240 FPS
+                                Waterproof
+                                Sports Action Camera with CMOS Sensor (Black)</h3>
+                            <span class="newprice">
+                                <span class="amount text-xl font-bold">₹57,999.00</span>
+                            </span>
+                            <span class="oldprice text-gray-500"><s>₹89,999</s></span>
+                        </div>
+                        <div
+                            class="bg-black p-5 rounded-lg shadow-md hover:ease-in-out hover:scale-105 transition-transform duration-300 relative Bestseller Below-35,000 Below-60,000 checkbox-tag">
+                            <button class="heart"> <i class="fa-solid fa-heart absolute z-10"></i></button>
+                            <img src="images/245216_0_lx8nyh.webp" alt="Camera 3"
+                                class="w-200 h-200 object-cover rounded">
+                            <h3 class="text-xs font-semibold">GoPro Hero10 5.3K and 23MP 60 FPS Waterproof Action Camera
+                                with
+                                HyperSmooth 4.0 Image Stabilization (Black)</h3>
+                            <span class="newprice">
+                                <span class="amount text-xl font-bold">₹22,999.00</span>
+                            </span>
+                            <span class="oldprice text-gray-500"><s>₹33,999</s></span>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!--Brand section-->
+            <section id="brands">
+                <h2 class="text-3xl font-bold  mb-6">Brands</h2>
+                <div class="w-auto h-auto grid grid-cols-2 md:grid-cols-4 gap-4  py-2">
+                    <div
+                        class="shadow-md hover:ease-in-out hover:scale-105 transition-transform duration-300 relative  Sony checkbox-tag">
+                        <img src="images/D_4split_289x256_camera_sony-21sept2022_mr3z1l.webp" alt="Sony"
+                            class="w-100 h-200object-cover  rounded-md">
+                        <h3 class="text-xl text-white font-semibold text-center mt-2">Sony</h3>
+                    </div>
+                    <div
+                        class="shadow-md hover:ease-in-out hover:scale-105 transition-transform duration-300 relative  Nikon checkbox-tag">
+                        <img src="images/D_4split_289x256_camera_nikon_21sept2022_bosmlz.webp" alt="Nikon"
+                            class="w-100 h-auto object-cover rounded-md ">
+                        <h3 class="text-xl text-white font-semibold text-center mt-2">Nikon</h3>
+                    </div>
+                    <div
+                        class="shadow-md hover:ease-in-out hover:scale-105 transition-transform duration-300 relative  Insta360 checkbox-tag">
+                        <img src="images/D_4split_289x256_camera_Insta360_21sept2022_rgau63.webp" alt="Insta360"
+                            class="w-100 h-auto object-cover  Brands Insta360 checkbox-tag rounded-md">
+                        <h3 class="text-xl text-white font-semibold text-center mt-2">Insta360</h3>
+                    </div>
+                    <div
+                        class="shadow-md hover:ease-in-out hover:scale-105 transition-transform duration-300 relative  GoPro checkbox-tag">
+                        <img src="images/D_4split_289x256_camera_Gopro_21sept2022_tln1pw.webp" alt="Gopro"
+                            class="w-100 h-auto object-cover ">
+                        <h3 class="text-xl text-white font-semibold text-center mt-2">Gopro</h3>
+                    </div>
+                    <div
+                        class="shadow-md hover:ease-in-out hover:scale-105 transition-transform duration-300 relative  Fujifilm checkbox-tag">
+                        <img src="images/D_4split_289x256_camera_fujifilm_21sept2022_tkkksq.webp" alt="fujifilm"
+                            class="w-100 h-auto object-cover">
+                        <h3 class="text-xl text-white font-semibold text-center mt-2">Fujifilm</h3>
+                    </div>
+                    <div
+                        class="shadow-md hover:ease-in-out hover:scale-105 transition-transform duration-300 relative  Canon checkbox-tag">
+                        <img src="images/D_4split_289x256_camera_CANON_21sept2022_xnhqab.webp" alt="canon"
+                            class="w-100 h-auto object-cover ">
+                        <h3 class="text-xl text-white font-semibold text-center mt-2">Canon</h3>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </section>
+    <!---NEWSLETTER--->
+    <section class="text-center my-14 " id="newsletter">
+        <h1 class="newsletter-title text-2xl text-white">Join our News Letter</h1>
+
+        <h3 class="newsletter-subtitle text-lg text-white mt-4">
+            Signup for our email newspaper to get exclusive discounts, updates, and more
+        </h3>
+
+        <input type="email" class="newsletter-input border w-100 p-2 rounded-xl" placeholder="Enter the Email ID" />
+
+        <br>
+
+        <button id="newsbtn"
+            class="font-extrabold newsletter-button bg-white text-black px-6 py-2 rounded-full mt-4 hover:bg-blue-500 hover:text-white transition-colors duration-300">
+            Subscribe
+        </button>
+    </section>
+
+    <!--Footer-->
+    <footer class="bg-slate-800 text-white py-6 mt-10">
+        <div class="container mx-auto text-center">
+            <p class="text-sm">© 2023 CaptureTheMemories. All rights reserved.</p>
+            <p class="text-sm"></p>
+            <p class="text-sm">Follow us on:
+                <a href="#" class="text-blue-400 hover:underline">Facebook</a>,
+                <a href="#" class="text-blue-400 hover:underline">Twitter</a>,
+                <a href="#" class="text-blue-400 hover:underline">Instagram</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="product.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.js"></script>
+
+</body>
+
+</html>
